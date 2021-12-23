@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		004C52732771EFCF00F1E14F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C52722771EFCF00F1E14F /* DetailViewController.swift */; };
+		005CA02E27665DF1005A0CB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA02D27665DF1005A0CB5 /* AppDelegate.swift */; };
+		005CA03027665DF1005A0CB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA02F27665DF1005A0CB5 /* SceneDelegate.swift */; };
+		005CA03227665DF1005A0CB5 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA03127665DF1005A0CB5 /* AuthorizationViewController.swift */; };
+		005CA03527665DF1005A0CB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005CA03327665DF1005A0CB5 /* Main.storyboard */; };
+		005CA03727665DF1005A0CB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005CA03627665DF1005A0CB5 /* Assets.xcassets */; };
+		005CA03A27665DF1005A0CB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005CA03827665DF1005A0CB5 /* LaunchScreen.storyboard */; };
+		005CA04B276752B4005A0CB5 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA04A276752B4005A0CB5 /* UIColor+Ext.swift */; };
+		005CA05127675E97005A0CB5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA05027675E97005A0CB5 /* SignUpViewController.swift */; };
+		005CA05327676297005A0CB5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA05227676297005A0CB5 /* LoginViewController.swift */; };
+		005CA0772768FDE0005A0CB5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA0762768FDE0005A0CB5 /* HomeViewController.swift */; };
+		005CA0992769E230005A0CB5 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA0982769E230005A0CB5 /* CategoryViewController.swift */; };
+		005CA09B276A1285005A0CB5 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA09A276A1285005A0CB5 /* Category.swift */; };
+		005CA0AE276CE6F4005A0CB5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA0AD276CE6F4005A0CB5 /* Utilities.swift */; };
+		005CA0B0276CE802005A0CB5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA0AF276CE802005A0CB5 /* AddViewController.swift */; };
+		005CA0DC276E5A4F005A0CB5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 005CA0DB276E5A4F005A0CB5 /* GoogleService-Info.plist */; };
+		006CAD31276F6A51005A7DAC /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CAD30276F6A51005A7DAC /* CameraViewController.swift */; };
+		006CAD33276F6FE0005A7DAC /* Warranty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CAD32276F6FE0005A7DAC /* Warranty.swift */; };
+		03973E4DBEB79F38F4E8B5F1 /* Pods_WarrantyGuard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE0DC3E79438414F009D5B7 /* Pods_WarrantyGuard.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		004C52722771EFCF00F1E14F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		005CA02A27665DF1005A0CB5 /* WarrantyGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarrantyGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		005CA02D27665DF1005A0CB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		005CA02F27665DF1005A0CB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		005CA03127665DF1005A0CB5 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		005CA03427665DF1005A0CB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		005CA03627665DF1005A0CB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		005CA03927665DF1005A0CB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		005CA03B27665DF1005A0CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		005CA04A276752B4005A0CB5 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		005CA05027675E97005A0CB5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		005CA05227676297005A0CB5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		005CA0762768FDE0005A0CB5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		005CA0982769E230005A0CB5 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		005CA09A276A1285005A0CB5 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		005CA0AD276CE6F4005A0CB5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		005CA0AF276CE802005A0CB5 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		005CA0DB276E5A4F005A0CB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		006CAD30276F6A51005A7DAC /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		006CAD32276F6FE0005A7DAC /* Warranty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warranty.swift; sourceTree = "<group>"; };
+		5CE0DC3E79438414F009D5B7 /* Pods_WarrantyGuard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WarrantyGuard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2F8D8E6ED83C761F6494639 /* Pods-WarrantyGuard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WarrantyGuard.release.xcconfig"; path = "Target Support Files/Pods-WarrantyGuard/Pods-WarrantyGuard.release.xcconfig"; sourceTree = "<group>"; };
+		C25E22C9B1FD10E58AB10617 /* Pods-WarrantyGuard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WarrantyGuard.debug.xcconfig"; path = "Target Support Files/Pods-WarrantyGuard/Pods-WarrantyGuard.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		005CA02727665DF1005A0CB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03973E4DBEB79F38F4E8B5F1 /* Pods_WarrantyGuard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		005CA02127665DF1005A0CB5 = {
+			isa = PBXGroup;
+			children = (
+				005CA02C27665DF1005A0CB5 /* WarrantyGuard */,
+				005CA02B27665DF1005A0CB5 /* Products */,
+				F67641D44EAF19BB0FEBE1C2 /* Pods */,
+				A2C868C37799A8D44269B732 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		005CA02B27665DF1005A0CB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				005CA02A27665DF1005A0CB5 /* WarrantyGuard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		005CA02C27665DF1005A0CB5 /* WarrantyGuard */ = {
+			isa = PBXGroup;
+			children = (
+				005CA0AC276CE6DA005A0CB5 /* Helper */,
+				005CA04F2767539F005A0CB5 /* Model */,
+				005CA0492767525F005A0CB5 /* Extension */,
+				005CA04D27675360005A0CB5 /* Views */,
+				005CA04C27675348005A0CB5 /* Controller */,
+				005CA04E2767536F005A0CB5 /* Support */,
+				005CA03627665DF1005A0CB5 /* Assets.xcassets */,
+				005CA03B27665DF1005A0CB5 /* Info.plist */,
+				005CA0DB276E5A4F005A0CB5 /* GoogleService-Info.plist */,
+			);
+			path = WarrantyGuard;
+			sourceTree = "<group>";
+		};
+		005CA0492767525F005A0CB5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				005CA04A276752B4005A0CB5 /* UIColor+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		005CA04C27675348005A0CB5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				005CA03127665DF1005A0CB5 /* AuthorizationViewController.swift */,
+				005CA05027675E97005A0CB5 /* SignUpViewController.swift */,
+				005CA05227676297005A0CB5 /* LoginViewController.swift */,
+				005CA0762768FDE0005A0CB5 /* HomeViewController.swift */,
+				005CA0982769E230005A0CB5 /* CategoryViewController.swift */,
+				005CA0AF276CE802005A0CB5 /* AddViewController.swift */,
+				006CAD30276F6A51005A7DAC /* CameraViewController.swift */,
+				004C52722771EFCF00F1E14F /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		005CA04D27675360005A0CB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				005CA03327665DF1005A0CB5 /* Main.storyboard */,
+				005CA03827665DF1005A0CB5 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		005CA04E2767536F005A0CB5 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				005CA02F27665DF1005A0CB5 /* SceneDelegate.swift */,
+				005CA02D27665DF1005A0CB5 /* AppDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		005CA04F2767539F005A0CB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				005CA09A276A1285005A0CB5 /* Category.swift */,
+				006CAD32276F6FE0005A7DAC /* Warranty.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		005CA0AC276CE6DA005A0CB5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				005CA0AD276CE6F4005A0CB5 /* Utilities.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		A2C868C37799A8D44269B732 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CE0DC3E79438414F009D5B7 /* Pods_WarrantyGuard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F67641D44EAF19BB0FEBE1C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C25E22C9B1FD10E58AB10617 /* Pods-WarrantyGuard.debug.xcconfig */,
+				A2F8D8E6ED83C761F6494639 /* Pods-WarrantyGuard.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		005CA02927665DF1005A0CB5 /* WarrantyGuard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 005CA03E27665DF1005A0CB5 /* Build configuration list for PBXNativeTarget "WarrantyGuard" */;
+			buildPhases = (
+				0216E8D06C6A2386FD08DC81 /* [CP] Check Pods Manifest.lock */,
+				005CA02627665DF1005A0CB5 /* Sources */,
+				005CA02727665DF1005A0CB5 /* Frameworks */,
+				005CA02827665DF1005A0CB5 /* Resources */,
+				573706C736A17A20B186492D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WarrantyGuard;
+			productName = WarrantyGuard;
+			productReference = 005CA02A27665DF1005A0CB5 /* WarrantyGuard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		005CA02227665DF1005A0CB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					005CA02927665DF1005A0CB5 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 005CA02527665DF1005A0CB5 /* Build configuration list for PBXProject "WarrantyGuard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 005CA02127665DF1005A0CB5;
+			productRefGroup = 005CA02B27665DF1005A0CB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				005CA02927665DF1005A0CB5 /* WarrantyGuard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		005CA02827665DF1005A0CB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005CA03A27665DF1005A0CB5 /* LaunchScreen.storyboard in Resources */,
+				005CA0DC276E5A4F005A0CB5 /* GoogleService-Info.plist in Resources */,
+				005CA03727665DF1005A0CB5 /* Assets.xcassets in Resources */,
+				005CA03527665DF1005A0CB5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0216E8D06C6A2386FD08DC81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WarrantyGuard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		573706C736A17A20B186492D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WarrantyGuard/Pods-WarrantyGuard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WarrantyGuard/Pods-WarrantyGuard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WarrantyGuard/Pods-WarrantyGuard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		005CA02627665DF1005A0CB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005CA05327676297005A0CB5 /* LoginViewController.swift in Sources */,
+				005CA03227665DF1005A0CB5 /* AuthorizationViewController.swift in Sources */,
+				005CA04B276752B4005A0CB5 /* UIColor+Ext.swift in Sources */,
+				005CA0B0276CE802005A0CB5 /* AddViewController.swift in Sources */,
+				005CA02E27665DF1005A0CB5 /* AppDelegate.swift in Sources */,
+				006CAD31276F6A51005A7DAC /* CameraViewController.swift in Sources */,
+				006CAD33276F6FE0005A7DAC /* Warranty.swift in Sources */,
+				005CA0992769E230005A0CB5 /* CategoryViewController.swift in Sources */,
+				005CA09B276A1285005A0CB5 /* Category.swift in Sources */,
+				005CA03027665DF1005A0CB5 /* SceneDelegate.swift in Sources */,
+				005CA0772768FDE0005A0CB5 /* HomeViewController.swift in Sources */,
+				005CA0AE276CE6F4005A0CB5 /* Utilities.swift in Sources */,
+				005CA05127675E97005A0CB5 /* SignUpViewController.swift in Sources */,
+				004C52732771EFCF00F1E14F /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		005CA03327665DF1005A0CB5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				005CA03427665DF1005A0CB5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		005CA03827665DF1005A0CB5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				005CA03927665DF1005A0CB5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		005CA03C27665DF1005A0CB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		005CA03D27665DF1005A0CB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		005CA03F27665DF1005A0CB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C25E22C9B1FD10E58AB10617 /* Pods-WarrantyGuard.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U95YF74XMG;
+				INFOPLIST_FILE = WarrantyGuard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.areej.WarrantyGuard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		005CA04027665DF1005A0CB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2F8D8E6ED83C761F6494639 /* Pods-WarrantyGuard.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U95YF74XMG;
+				INFOPLIST_FILE = WarrantyGuard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.areej.WarrantyGuard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		005CA02527665DF1005A0CB5 /* Build configuration list for PBXProject "WarrantyGuard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005CA03C27665DF1005A0CB5 /* Debug */,
+				005CA03D27665DF1005A0CB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		005CA03E27665DF1005A0CB5 /* Build configuration list for PBXNativeTarget "WarrantyGuard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005CA03F27665DF1005A0CB5 /* Debug */,
+				005CA04027665DF1005A0CB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 005CA02227665DF1005A0CB5 /* Project object */;
+}

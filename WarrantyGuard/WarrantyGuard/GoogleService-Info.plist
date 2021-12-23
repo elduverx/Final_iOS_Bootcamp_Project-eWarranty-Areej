@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>905904640268-m2iq46b6smp5adf251o8gnked9f8d0d3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.905904640268-m2iq46b6smp5adf251o8gnked9f8d0d3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDt-vQYZbiDVIp6YnnPaxD3dRIxYMRzXvU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>905904640268</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.areej.WarrantyGuard</string>
+	<key>PROJECT_ID</key>
+	<string>warrantyguard-areej</string>
+	<key>STORAGE_BUCKET</key>
+	<string>warrantyguard-areej.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:905904640268:ios:9394e03dcda32211ad3929</string>
+</dict>
+</plist>
