@@ -9,9 +9,12 @@ import UIKit
 
 struct Warranty {
   
-  let name: String
-  let purchasDate: Date
-  let warrantyPeriod: Int
-  let category:String
+  var productName: String
+  var purchasDate: Date
+  var expiryDate: Date
+  var category:String
+  var warrantyImage: UIImage
+  var productImage: UIImage?
+  var notes: String?
   
 }

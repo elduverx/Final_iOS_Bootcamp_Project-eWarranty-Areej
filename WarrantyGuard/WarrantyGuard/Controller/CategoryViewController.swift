@@ -11,11 +11,7 @@ class CategoryViewController : UIViewController , UITableViewDelegate ,UITableVi
   
   @IBOutlet weak var tableView: UITableView!
   
-  
-  var categories:[Category] = [Category(name: "Electronics"),
-                               Category(name: "Phones"),
-                               Category(name: "Sport"),
-                               Category(name: "Toys"),]
+//   var category: Category = Category()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,7 +31,7 @@ class CategoryViewController : UIViewController , UITableViewDelegate ,UITableVi
     let action = UIAlertAction(title: "Add", style: .default) { (_) in
       guard let newCategory = alert.textFields?.first?.text else { return }
       print(newCategory)
-      self.categories.append(Category(name: newCategory))
+      Category.categories.append(newCategory)
       self.tableView.reloadData()
     }
     
@@ -46,14 +42,14 @@ class CategoryViewController : UIViewController , UITableViewDelegate ,UITableVi
   
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    categories.count
+    Category.categories.count
   }
   
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    cell.textLabel?.text = categories[indexPath.row].name
+    cell.textLabel?.text = Category.categories[indexPath.row]
     
     return cell
     
@@ -62,7 +58,7 @@ class CategoryViewController : UIViewController , UITableViewDelegate ,UITableVi
   
   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     guard editingStyle == .delete else { return }
-    categories.remove(at: indexPath.row)
+    Category.categories.remove(at: indexPath.row)
     
     tableView.deleteRows(at: [indexPath], with: .automatic)
   }

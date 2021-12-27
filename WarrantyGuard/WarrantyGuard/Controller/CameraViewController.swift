@@ -11,11 +11,14 @@ class CameraViewController : UIViewController, UIImagePickerControllerDelegate, 
   
   @IBOutlet weak var nextButton: UIButton!
   @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var errorLabel: UILabel!
+  
   
   override func viewDidLoad() {
     
     super.viewDidLoad()
     Utilities.configureButtons(button: nextButton)
+    errorLabel.alpha = 0
     
   }
   
@@ -45,6 +48,28 @@ class CameraViewController : UIViewController, UIImagePickerControllerDelegate, 
       return
     }
     imageView.image = image
+  }
+  
+  
+  @IBAction func nextButtonPressed(_ sender: UIButton) {
+    
+    if imageView.image != nil {
+      transitionToNext()
+    } else {
+      errorLabel.text = "Please enter your warranty picture"
+      errorLabel.alpha = 1
+    }
+      
+  }
+  
+  
+  func transitionToNext() {
+    
+    let nextViewController = storyboard?.instantiateViewController(identifier: "Next")
+    
+    view.window?.rootViewController = nextViewController
+    view.window?.makeKeyAndVisible()
+    
   }
   
 }

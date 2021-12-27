@@ -9,6 +9,6 @@ import UIKit
 
 struct Category {
   
-  let name:String
+  static var categories = ["Electronics","Phones","Sport","Toys"]
   
 }

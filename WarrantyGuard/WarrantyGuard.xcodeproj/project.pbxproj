@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		004C52732771EFCF00F1E14F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C52722771EFCF00F1E14F /* DetailViewController.swift */; };
+		004C52752778786100F1E14F /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C52742778786100F1E14F /* UIViewController+Ext.swift */; };
+		004C52772779A9CB00F1E14F /* OptionalDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C52762779A9CB00F1E14F /* OptionalDataViewController.swift */; };
 		005CA02E27665DF1005A0CB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA02D27665DF1005A0CB5 /* AppDelegate.swift */; };
 		005CA03027665DF1005A0CB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA02F27665DF1005A0CB5 /* SceneDelegate.swift */; };
 		005CA03227665DF1005A0CB5 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA03127665DF1005A0CB5 /* AuthorizationViewController.swift */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		004C52722771EFCF00F1E14F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		004C52742778786100F1E14F /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		004C52762779A9CB00F1E14F /* OptionalDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalDataViewController.swift; sourceTree = "<group>"; };
 		005CA02A27665DF1005A0CB5 /* WarrantyGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarrantyGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		005CA02D27665DF1005A0CB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		005CA02F27665DF1005A0CB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				005CA04A276752B4005A0CB5 /* UIColor+Ext.swift */,
+				004C52742778786100F1E14F /* UIViewController+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 				005CA0982769E230005A0CB5 /* CategoryViewController.swift */,
 				005CA0AF276CE802005A0CB5 /* AddViewController.swift */,
 				006CAD30276F6A51005A7DAC /* CameraViewController.swift */,
+				004C52762779A9CB00F1E14F /* OptionalDataViewController.swift */,
 				004C52722771EFCF00F1E14F /* DetailViewController.swift */,
 			);
 			path = Controller;
@@ -292,7 +298,9 @@
 			files = (
 				005CA05327676297005A0CB5 /* LoginViewController.swift in Sources */,
 				005CA03227665DF1005A0CB5 /* AuthorizationViewController.swift in Sources */,
+				004C52752778786100F1E14F /* UIViewController+Ext.swift in Sources */,
 				005CA04B276752B4005A0CB5 /* UIColor+Ext.swift in Sources */,
+				004C52772779A9CB00F1E14F /* OptionalDataViewController.swift in Sources */,
 				005CA0B0276CE802005A0CB5 /* AddViewController.swift in Sources */,
 				005CA02E27665DF1005A0CB5 /* AppDelegate.swift in Sources */,
 				006CAD31276F6A51005A7DAC /* CameraViewController.swift in Sources */,
