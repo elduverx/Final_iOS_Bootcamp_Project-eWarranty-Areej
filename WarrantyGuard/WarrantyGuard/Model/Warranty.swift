@@ -9,12 +9,16 @@ import UIKit
 
 struct Warranty {
   
+//  static var warranty:Warranty?
+  
+  static var allWarranty = [Warranty]()
+  
   var productName: String
-  var purchasDate: Date
-  var expiryDate: Date
+  var purchasDate: String
+  var expiryDate: String
   var category:String
-  var warrantyImage: UIImage
-  var productImage: UIImage?
+  var warrantyImage: UIImageView?
+  var productImage: UIImageView?
   var notes: String?
   
 }

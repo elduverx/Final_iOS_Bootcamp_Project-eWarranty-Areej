@@ -329,17 +329,17 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="676"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="eNM-Rp-tns">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detail" rowHeight="100" id="eNM-Rp-tns" customClass="DetailTableViewCell" customModule="WarrantyGuard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eNM-Rp-tns" id="oGK-dg-Dgk">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-c6-kfa">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-c6-kfa" userLabel="Root_Stack_View">
                                                     <rect key="frame" x="20" y="20" width="374" height="60"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CvH-Hf-X0A">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CvH-Hf-X0A" userLabel="Product_Image_View">
                                                             <rect key="frame" x="0.0" y="0.0" width="133" height="60"/>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JpC-9v-S4P">
@@ -373,6 +373,12 @@
                                                 <constraint firstAttribute="bottom" secondItem="Lzq-c6-kfa" secondAttribute="bottom" constant="20" id="fys-Dk-iCd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="daysLeftLabel" destination="H5m-4t-iwZ" id="90j-EN-gRC"/>
+                                            <outlet property="productImageView" destination="CvH-Hf-X0A" id="4fg-FY-GmT"/>
+                                            <outlet property="productName" destination="9GL-Ja-N6H" id="QCL-Cn-fNi"/>
+                                            <outlet property="progressView" destination="2jS-h7-wzg" id="WE6-Wz-ipc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -387,6 +393,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="phw-Ja-uew"/>
+                    <connections>
+                        <outlet property="tableView" destination="aJK-J3-UXk" id="vp2-up-1dE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBg-1K-Tex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -410,7 +419,7 @@
         <!--Add_View_Controller-->
         <scene sceneID="kZC-kt-WF0">
             <objects>
-                <viewController id="W2T-Jn-hls" userLabel="Add_View_Controller" customClass="AddViewController" customModule="WarrantyGuard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddDataVC" id="W2T-Jn-hls" userLabel="Add_View_Controller" customClass="AddViewController" customModule="WarrantyGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m1W-Qb-0fF" userLabel="Root_View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -571,8 +580,8 @@
                         <outlet property="errorLabel" destination="mNu-bS-YLa" id="sX3-49-ViP"/>
                         <outlet property="expiryDateTextField" destination="b5d-Ng-NIk" id="srW-rX-XUp"/>
                         <outlet property="productNameTextField" destination="0s7-kk-Rhy" id="ovu-Zj-F56"/>
-                        <outlet property="purchasDateTextField" destination="tKr-H2-Huz" id="Xar-4d-qZq"/>
-                        <segue destination="Mh2-B0-V0J" kind="show" identifier="" id="w79-a8-z2I"/>
+                        <outlet property="purchaseDateTextField" destination="tKr-H2-Huz" id="Xar-4d-qZq"/>
+                        <segue destination="Mh2-B0-V0J" kind="show" identifier="Continue" id="w79-a8-z2I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajN-5D-J4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -582,7 +591,7 @@
         <!--Optional_Data_View_Controller-->
         <scene sceneID="LW9-5i-PcW">
             <objects>
-                <viewController storyboardIdentifier="Next" id="NMT-yo-Rzy" userLabel="Optional_Data_View_Controller" customClass="OptionalDataViewController" customModule="WarrantyGuard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NMT-yo-Rzy" userLabel="Optional_Data_View_Controller" customClass="OptionalDataViewController" customModule="WarrantyGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qJL-pe-wGd" userLabel="Root_View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -705,7 +714,7 @@
         <!--Camera_View_Controller-->
         <scene sceneID="u2j-X1-l4g">
             <objects>
-                <viewController storyboardIdentifier="Continue" id="Mh2-B0-V0J" userLabel="Camera_View_Controller" customClass="CameraViewController" customModule="WarrantyGuard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraVC" id="Mh2-B0-V0J" userLabel="Camera_View_Controller" customClass="CameraViewController" customModule="WarrantyGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DzN-UR-Awz" userLabel="Root_View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -810,9 +819,9 @@
                     <navigationItem key="navigationItem" id="mmU-ok-ahB"/>
                     <connections>
                         <outlet property="errorLabel" destination="bAs-MS-4Yg" id="gSH-CY-6xs"/>
-                        <outlet property="imageView" destination="FqG-i5-SE9" id="FPH-4P-h0B"/>
                         <outlet property="nextButton" destination="kV9-MB-Ucx" id="oq6-AF-5hc"/>
-                        <segue destination="NMT-yo-Rzy" kind="show" id="2U4-Ik-G8y"/>
+                        <outlet property="warrantyImageView" destination="FqG-i5-SE9" id="FPH-4P-h0B"/>
+                        <segue destination="NMT-yo-Rzy" kind="show" identifier="Next" id="2U4-Ik-G8y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqy-ES-OgN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -828,14 +837,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="done" translatesAutoresizingMaskIntoConstraints="NO" id="gTt-cC-Q9y">
-                                <rect key="frame" x="80" y="248" width="254" height="405"/>
+                                <rect key="frame" x="80" y="218" width="254" height="435"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="we2-bG-G2U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gTt-cC-Q9y" firstAttribute="leading" secondItem="we2-bG-G2U" secondAttribute="leading" constant="80" id="0W4-qe-5hC"/>
-                            <constraint firstItem="gTt-cC-Q9y" firstAttribute="top" secondItem="we2-bG-G2U" secondAttribute="top" constant="160" id="WPN-HZ-bjr"/>
+                            <constraint firstItem="gTt-cC-Q9y" firstAttribute="top" secondItem="we2-bG-G2U" secondAttribute="top" constant="130" id="WPN-HZ-bjr"/>
                             <constraint firstItem="we2-bG-G2U" firstAttribute="trailing" secondItem="gTt-cC-Q9y" secondAttribute="trailing" constant="80" id="YLc-xu-g9G"/>
                             <constraint firstItem="we2-bG-G2U" firstAttribute="bottom" secondItem="gTt-cC-Q9y" secondAttribute="bottom" constant="160" id="aax-8j-I1f"/>
                         </constraints>
@@ -844,7 +853,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hI3-9O-MEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7862" y="1955"/>
+            <point key="canvasLocation" x="7860.8695652173919" y="1954.6875"/>
         </scene>
         <!--Search_View_Controller-->
         <scene sceneID="SYf-CS-tNQ">
@@ -891,8 +900,20 @@
                     <view key="view" contentMode="scaleToFill" id="nuS-Vx-ZMW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sKc-30-Exm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ehE-eD-xc6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ehE-eD-xc6" firstAttribute="trailing" secondItem="sKc-30-Exm" secondAttribute="trailing" id="Q4d-Ss-xVe"/>
+                            <constraint firstItem="ehE-eD-xc6" firstAttribute="bottom" secondItem="sKc-30-Exm" secondAttribute="bottom" id="laz-97-Ta6"/>
+                            <constraint firstItem="sKc-30-Exm" firstAttribute="top" secondItem="ehE-eD-xc6" secondAttribute="top" id="rlC-QO-QjI"/>
+                            <constraint firstItem="sKc-30-Exm" firstAttribute="leading" secondItem="ehE-eD-xc6" secondAttribute="leading" id="s95-Eu-KJu"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="yuS-6d-vaN"/>
                 </viewController>

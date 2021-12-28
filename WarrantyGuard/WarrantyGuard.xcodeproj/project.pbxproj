@@ -10,6 +10,7 @@
 		004C52732771EFCF00F1E14F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C52722771EFCF00F1E14F /* DetailViewController.swift */; };
 		004C52752778786100F1E14F /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C52742778786100F1E14F /* UIViewController+Ext.swift */; };
 		004C52772779A9CB00F1E14F /* OptionalDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C52762779A9CB00F1E14F /* OptionalDataViewController.swift */; };
+		004C527B277AEE3700F1E14F /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C527A277AEE3700F1E14F /* DetailTableViewCell.swift */; };
 		005CA02E27665DF1005A0CB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA02D27665DF1005A0CB5 /* AppDelegate.swift */; };
 		005CA03027665DF1005A0CB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA02F27665DF1005A0CB5 /* SceneDelegate.swift */; };
 		005CA03227665DF1005A0CB5 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA03127665DF1005A0CB5 /* AuthorizationViewController.swift */; };
@@ -34,6 +35,7 @@
 		004C52722771EFCF00F1E14F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		004C52742778786100F1E14F /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		004C52762779A9CB00F1E14F /* OptionalDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalDataViewController.swift; sourceTree = "<group>"; };
+		004C527A277AEE3700F1E14F /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		005CA02A27665DF1005A0CB5 /* WarrantyGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarrantyGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		005CA02D27665DF1005A0CB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		005CA02F27665DF1005A0CB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		004C5278277AED4700F1E14F /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				004C5279277AED6800F1E14F /* Cells */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		004C5279277AED6800F1E14F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				004C527A277AEE3700F1E14F /* DetailTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		005CA02127665DF1005A0CB5 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +113,7 @@
 				005CA04F2767539F005A0CB5 /* Model */,
 				005CA0492767525F005A0CB5 /* Extension */,
 				005CA04D27675360005A0CB5 /* Views */,
+				004C5278277AED4700F1E14F /* CustomViews */,
 				005CA04C27675348005A0CB5 /* Controller */,
 				005CA04E2767536F005A0CB5 /* Support */,
 				005CA03627665DF1005A0CB5 /* Assets.xcassets */,
@@ -297,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				005CA05327676297005A0CB5 /* LoginViewController.swift in Sources */,
+				004C527B277AEE3700F1E14F /* DetailTableViewCell.swift in Sources */,
 				005CA03227665DF1005A0CB5 /* AuthorizationViewController.swift in Sources */,
 				004C52752778786100F1E14F /* UIViewController+Ext.swift in Sources */,
 				005CA04B276752B4005A0CB5 /* UIColor+Ext.swift in Sources */,

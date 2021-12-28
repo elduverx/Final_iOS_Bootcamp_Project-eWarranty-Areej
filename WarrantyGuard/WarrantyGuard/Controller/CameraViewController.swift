@@ -10,9 +10,10 @@ import UIKit
 class CameraViewController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
   @IBOutlet weak var nextButton: UIButton!
-  @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var warrantyImageView: UIImageView!
   @IBOutlet weak var errorLabel: UILabel!
   
+  var theWarrantyImage: UIImageView?
   
   override func viewDidLoad() {
     
@@ -47,13 +48,15 @@ class CameraViewController : UIViewController, UIImagePickerControllerDelegate, 
       print("image not found")
       return
     }
-    imageView.image = image
+    warrantyImageView.image = image
   }
   
   
   @IBAction func nextButtonPressed(_ sender: UIButton) {
     
-    if imageView.image != nil {
+    if warrantyImageView.image != nil {
+      print("nextButtonPressed")
+      theWarrantyImage?.image = warrantyImageView.image
       transitionToNext()
     } else {
       errorLabel.text = "Please enter your warranty picture"
@@ -65,10 +68,7 @@ class CameraViewController : UIViewController, UIImagePickerControllerDelegate, 
   
   func transitionToNext() {
     
-    let nextViewController = storyboard?.instantiateViewController(identifier: "Next")
-    
-    view.window?.rootViewController = nextViewController
-    view.window?.makeKeyAndVisible()
+    performSegue(withIdentifier: "Next", sender: nil)
     
   }
   

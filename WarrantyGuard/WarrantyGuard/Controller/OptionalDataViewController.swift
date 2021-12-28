@@ -14,6 +14,8 @@ class OptionalDataViewController : UIViewController, UIImagePickerControllerDele
   @IBOutlet weak var notesTextField: UITextField!
   @IBOutlet weak var nextButton: UIButton!
   
+  var theProductImage: UIImageView?
+  var notes: String?
   
   override func viewDidLoad() {
     
@@ -35,6 +37,17 @@ class OptionalDataViewController : UIViewController, UIImagePickerControllerDele
   
   
   @IBAction func nextButtonPressed(_ sender: UIButton) {
+    
+    theProductImage?.image = productImageView.image
+    notes = notesTextField.text
+    
+    let addDataVC = storyboard?.instantiateViewController(identifier: "AddDataVC") as! AddViewController
+    let cameraVC = storyboard?.instantiateViewController(identifier: "CameraVC") as! CameraViewController
+    
+    let data = Warranty(productName: addDataVC.productName, purchasDate: addDataVC.purchaseDate, expiryDate: addDataVC.expiryDate, category: addDataVC.categoryName, warrantyImage: cameraVC.theWarrantyImage, productImage: theProductImage, notes: notes)
+    
+    Warranty.allWarranty.append(data)
+    
   }
   
   

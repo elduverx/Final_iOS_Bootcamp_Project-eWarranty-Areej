@@ -10,18 +10,24 @@ import UIKit
 class AddViewController: UIViewController {
   
   @IBOutlet weak var productNameTextField: UITextField!
-  @IBOutlet weak var purchasDateTextField: UITextField!
+  @IBOutlet weak var purchaseDateTextField: UITextField!
   @IBOutlet weak var expiryDateTextField: UITextField!
   @IBOutlet weak var categoryTextField: UITextField!
   @IBOutlet weak var continueButton: UIButton!
   @IBOutlet weak var errorLabel: UILabel!
   
-  var warranty:Warranty!
+  var productName:String = ""
+  var purchaseDate:String = ""
+  var expiryDate:String = ""
+  var categoryName:String = ""
+  
+  
   
   var currentIndex = 0
   let pickerView = UIPickerView()
   let purchasDatePicker = UIDatePicker()
   let expiryDatePicker = UIDatePicker()
+ 
   
   
   override func viewDidLoad() {
@@ -43,67 +49,67 @@ class AddViewController: UIViewController {
   
   
   func createDatePicker(){
-    
+
     //Toolbar
     let toolBar = UIToolbar()
     toolBar.sizeToFit()
-    
+
     //Bar buttom
     let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
     toolBar.setItems([doneButton], animated: true)
-    
+
     //Assign toolbar
-    purchasDateTextField.inputAccessoryView = toolBar
+    purchaseDateTextField.inputAccessoryView = toolBar
     expiryDateTextField.inputAccessoryView = toolBar
-    
+
     //Assign datePicker to the TextField
-    purchasDateTextField.inputView = purchasDatePicker
+    purchaseDateTextField.inputView = purchasDatePicker
     expiryDateTextField.inputView = expiryDatePicker
-    
+
     //DatePicker Mode
     purchasDatePicker.datePickerMode = .date
     purchasDatePicker.preferredDatePickerStyle = .wheels
     expiryDatePicker.datePickerMode = .date
     expiryDatePicker.preferredDatePickerStyle = .wheels
-    
+
   }
   
-  
-  //  func createDatePicker(textField:UITextField){
-  //
-  //    //Toolbar
-  //    let toolBar = UIToolbar()
-  //    toolBar.sizeToFit()
-  //
-  //    //Bar buttom
-  //    let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
-  //    toolBar.setItems([doneButton], animated: true)
-  //
-  //    //Assign toolbar
-  //    textField.inputAccessoryView = toolBar
-  //
-  //    //Assign datePicker to the TextField
-  //    textField.inputView = datePicker
-  //
-  //    //DatePicker Mode
-  //    datePicker.datePickerMode = .date
-  //    datePicker.preferredDatePickerStyle = .wheels
-  //
-  //  }
+//
+//    func createDatePicker(textField:UITextField){
+//
+//      //Toolbar
+//      let toolBar = UIToolbar()
+//      toolBar.sizeToFit()
+//
+//      //Bar buttom
+//      let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+//      toolBar.setItems([doneButton], animated: true)
+//
+//      //Assign toolbar
+//      textField.inputAccessoryView = toolBar
+//
+//      //Assign datePicker to the TextField
+//      textField.inputView = datePicker
+//
+//      //DatePicker Mode
+//      datePicker.datePickerMode = .date
+//      datePicker.preferredDatePickerStyle = .wheels
+//
+//    }
   
   
   @objc func donePressed(){
-    
+
     //Formatter
     let formatter = DateFormatter()
     formatter.dateStyle = .medium
     formatter.timeStyle = .none
-    
-    purchasDateTextField.text = formatter.string(from: purchasDatePicker.date)
+
+    purchaseDateTextField.text = formatter.string(from: purchasDatePicker.date)
     self.view.endEditing(true)
     expiryDateTextField.text = formatter.string(from: expiryDatePicker.date)
     self.view.endEditing(true)
-    
+
   }
   
   
@@ -143,10 +149,11 @@ class AddViewController: UIViewController {
     }
     else {
       
-      //      warranty.productName = productNameTextField.text ?? ""
-      //      warranty.purchasDate = purchasDatePicker.date
-      //      warranty.expiryDate = expiryDatePicker.date
-      //      warranty.category = categoryTextField.text!
+      productName = productNameTextField.text!
+      purchaseDate = purchaseDateTextField.text!
+      expiryDate = expiryDateTextField.text!
+      categoryName = categoryTextField.text!
+      
       
       transitionToNext()
       
@@ -167,7 +174,7 @@ class AddViewController: UIViewController {
     
     // Check that all fields are filled in
     if productNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        purchasDateTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        purchaseDateTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
         expiryDateTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
         categoryTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
       
@@ -180,10 +187,7 @@ class AddViewController: UIViewController {
   
   func transitionToNext() {
     
-    let nextViewController = storyboard?.instantiateViewController(identifier: "Continue")
-    
-    view.window?.rootViewController = nextViewController
-    view.window?.makeKeyAndVisible()
+    performSegue(withIdentifier: "Continue", sender: nil)
     
   }
   
