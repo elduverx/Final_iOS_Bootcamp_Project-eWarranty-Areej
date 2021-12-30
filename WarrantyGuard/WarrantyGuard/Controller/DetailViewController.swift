@@ -29,7 +29,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "detail", for: indexPath) as! DetailTableViewCell
     let warrantyData = Warranty.allWarranty[indexPath.row]
-//    cell.setUpCell(image: warrantyData.warrantyImage, name: warrantyData.productName)
+    cell.setUpCell(image: warrantyData.productImage!, name: warrantyData.productName)
     
     return cell
     

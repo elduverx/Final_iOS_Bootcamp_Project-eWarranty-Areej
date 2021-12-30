@@ -9,19 +9,28 @@ import UIKit
 
 class OptionalDataViewController : UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
   
+  var productName = ""
+  var purchaseDate = ""
+  var expiryDate = ""
+  var category = ""
+  var theWarrantyImage:UIImage?
+  var theProductImage:UIImage?
+  var notes = ""
+  
   
   @IBOutlet weak var productImageView: UIImageView!
   @IBOutlet weak var notesTextField: UITextField!
   @IBOutlet weak var nextButton: UIButton!
   
-  var theProductImage: UIImageView?
-  var notes: String?
   
   override func viewDidLoad() {
     
     super.viewDidLoad()
     Utilities.configureButtons(button: nextButton)
     configureHideKeyboardWhenRootViewTapped()
+    
+    
+    
     
   }
   
@@ -38,15 +47,15 @@ class OptionalDataViewController : UIViewController, UIImagePickerControllerDele
   
   @IBAction func nextButtonPressed(_ sender: UIButton) {
     
-    theProductImage?.image = productImageView.image
-    notes = notesTextField.text
+    notes = notesTextField.text ?? ""
+    theProductImage = productImageView.image
     
-    let addDataVC = storyboard?.instantiateViewController(identifier: "AddDataVC") as! AddViewController
-    let cameraVC = storyboard?.instantiateViewController(identifier: "CameraVC") as! CameraViewController
     
-    let data = Warranty(productName: addDataVC.productName, purchasDate: addDataVC.purchaseDate, expiryDate: addDataVC.expiryDate, category: addDataVC.categoryName, warrantyImage: cameraVC.theWarrantyImage, productImage: theProductImage, notes: notes)
+    let data = Warranty(productName: productName, purchasDate: purchaseDate, expiryDate: expiryDate, category: category, warrantyImage: theWarrantyImage!, productImage: theProductImage, notes: notes)
     
     Warranty.allWarranty.append(data)
+    
+    print("\(data)")
     
   }
   

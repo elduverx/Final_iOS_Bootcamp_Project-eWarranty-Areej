@@ -16,18 +16,12 @@ class AddViewController: UIViewController {
   @IBOutlet weak var continueButton: UIButton!
   @IBOutlet weak var errorLabel: UILabel!
   
-  var productName:String = ""
-  var purchaseDate:String = ""
-  var expiryDate:String = ""
-  var categoryName:String = ""
-  
-  
   
   var currentIndex = 0
   let pickerView = UIPickerView()
   let purchasDatePicker = UIDatePicker()
   let expiryDatePicker = UIDatePicker()
- 
+  
   
   
   override func viewDidLoad() {
@@ -49,67 +43,44 @@ class AddViewController: UIViewController {
   
   
   func createDatePicker(){
-
+    
     //Toolbar
     let toolBar = UIToolbar()
     toolBar.sizeToFit()
-
+    
     //Bar buttom
     let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
     toolBar.setItems([doneButton], animated: true)
-
+    
     //Assign toolbar
     purchaseDateTextField.inputAccessoryView = toolBar
     expiryDateTextField.inputAccessoryView = toolBar
-
+    
     //Assign datePicker to the TextField
     purchaseDateTextField.inputView = purchasDatePicker
     expiryDateTextField.inputView = expiryDatePicker
-
+    
     //DatePicker Mode
     purchasDatePicker.datePickerMode = .date
     purchasDatePicker.preferredDatePickerStyle = .wheels
     expiryDatePicker.datePickerMode = .date
     expiryDatePicker.preferredDatePickerStyle = .wheels
-
+    
   }
-  
-//
-//    func createDatePicker(textField:UITextField){
-//
-//      //Toolbar
-//      let toolBar = UIToolbar()
-//      toolBar.sizeToFit()
-//
-//      //Bar buttom
-//      let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
-//      toolBar.setItems([doneButton], animated: true)
-//
-//      //Assign toolbar
-//      textField.inputAccessoryView = toolBar
-//
-//      //Assign datePicker to the TextField
-//      textField.inputView = datePicker
-//
-//      //DatePicker Mode
-//      datePicker.datePickerMode = .date
-//      datePicker.preferredDatePickerStyle = .wheels
-//
-//    }
   
   
   @objc func donePressed(){
-
+    
     //Formatter
     let formatter = DateFormatter()
     formatter.dateStyle = .medium
     formatter.timeStyle = .none
-
+    
     purchaseDateTextField.text = formatter.string(from: purchasDatePicker.date)
     self.view.endEditing(true)
     expiryDateTextField.text = formatter.string(from: expiryDatePicker.date)
     self.view.endEditing(true)
-
+    
   }
   
   
@@ -137,31 +108,6 @@ class AddViewController: UIViewController {
   }
   
   
-  @IBAction func continueButtonPressed(_ sender: UIButton) {
-    
-    let error = validateFields()
-    
-    if error != nil {
-      
-      // There's something wrong with the fields, show error message
-      showError(error!)
-      
-    }
-    else {
-      
-      productName = productNameTextField.text!
-      purchaseDate = purchaseDateTextField.text!
-      expiryDate = expiryDateTextField.text!
-      categoryName = categoryTextField.text!
-      
-      
-      transitionToNext()
-      
-    }
-    
-  }
-  
-  
   func showError(_ message: String){
     
     errorLabel.text = message
@@ -185,11 +131,42 @@ class AddViewController: UIViewController {
   }
   
   
-  func transitionToNext() {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
-    performSegue(withIdentifier: "Continue", sender: nil)
+    let error = validateFields()
     
+    if error != nil {
+      
+      // There's something wrong with the fields, show error message
+      showError(error!)
+      
+    }
+    else {
+      
+      if segue.identifier == "Continue" {
+        
+        let destinationVC = segue.destination as! CameraViewController
+        
+        let productName = productNameTextField.text
+        let purchaseDate = purchaseDateTextField.text
+        let expiryDate = expiryDateTextField.text
+        let category = categoryTextField.text
+        
+        destinationVC.productName = productName ?? ""
+        destinationVC.purchaseDate = purchaseDate ?? ""
+        destinationVC.expiryDate = expiryDate ?? ""
+        destinationVC.category = category ?? ""
+        
+        
+      }
+      
+    }
   }
+  
+  
+//  func getTheDaysLeft() -> String {
+//    let diffInDays = Calendar.current.dateComponents([.day], from: purchasDatePicker, to: expiryDatePicker).day
+//  }
   
 }
 

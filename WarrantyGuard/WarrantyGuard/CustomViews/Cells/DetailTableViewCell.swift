@@ -34,9 +34,6 @@ class DetailTableViewCell: UITableViewCell {
 //    daysLeftLabel.text =
   }
   
-  
-  
-
 }
 
 extension Calendar {

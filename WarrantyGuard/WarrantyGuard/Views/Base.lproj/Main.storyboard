@@ -362,6 +362,12 @@
                                                                     <color key="tintColor" red="0.42352941179999998" green="0.38823529410000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </progressView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="2jS-h7-wzg" firstAttribute="leading" secondItem="JpC-9v-S4P" secondAttribute="leading" id="PIT-u5-tdr"/>
+                                                                <constraint firstItem="9GL-Ja-N6H" firstAttribute="top" secondItem="JpC-9v-S4P" secondAttribute="top" id="Srm-d9-aEk"/>
+                                                                <constraint firstItem="H5m-4t-iwZ" firstAttribute="leading" secondItem="JpC-9v-S4P" secondAttribute="leading" id="df5-8s-p2x"/>
+                                                                <constraint firstItem="9GL-Ja-N6H" firstAttribute="leading" secondItem="JpC-9v-S4P" secondAttribute="leading" id="oPD-mB-6e5"/>
+                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
@@ -546,7 +552,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="continueButtonPressed:" destination="W2T-Jn-hls" eventType="touchUpInside" id="JfM-xp-msX"/>
+                                    <segue destination="Mh2-B0-V0J" kind="show" identifier="Continue" id="2Dg-Ym-Z1k"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNu-bS-YLa" userLabel="Error_Label">
@@ -581,7 +587,7 @@
                         <outlet property="expiryDateTextField" destination="b5d-Ng-NIk" id="srW-rX-XUp"/>
                         <outlet property="productNameTextField" destination="0s7-kk-Rhy" id="ovu-Zj-F56"/>
                         <outlet property="purchaseDateTextField" destination="tKr-H2-Huz" id="Xar-4d-qZq"/>
-                        <segue destination="Mh2-B0-V0J" kind="show" identifier="Continue" id="w79-a8-z2I"/>
+                        <segue destination="NMT-yo-Rzy" kind="show" identifier="Go" id="rze-8f-1xb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajN-5D-J4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -709,7 +715,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6e-TX-8IY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7160.8695652173919" y="1954.6875"/>
+            <point key="canvasLocation" x="7257" y="1908"/>
         </scene>
         <!--Camera_View_Controller-->
         <scene sceneID="u2j-X1-l4g">
@@ -775,7 +781,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="nextButtonPressed:" destination="Mh2-B0-V0J" eventType="touchUpInside" id="qq5-sD-qxf"/>
+                                            <segue destination="NMT-yo-Rzy" kind="show" identifier="" id="ijC-sh-fWk"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAs-MS-4Yg">
@@ -821,12 +827,11 @@
                         <outlet property="errorLabel" destination="bAs-MS-4Yg" id="gSH-CY-6xs"/>
                         <outlet property="nextButton" destination="kV9-MB-Ucx" id="oq6-AF-5hc"/>
                         <outlet property="warrantyImageView" destination="FqG-i5-SE9" id="FPH-4P-h0B"/>
-                        <segue destination="NMT-yo-Rzy" kind="show" identifier="Next" id="2U4-Ik-G8y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqy-ES-OgN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6468" y="1955"/>
+            <point key="canvasLocation" x="6510" y="1908"/>
         </scene>
         <!--Done_View_Controller-->
         <scene sceneID="Dwa-Vy-Atg">
@@ -853,7 +858,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hI3-9O-MEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7860.8695652173919" y="1954.6875"/>
+            <point key="canvasLocation" x="7988" y="1908"/>
         </scene>
         <!--Search_View_Controller-->
         <scene sceneID="SYf-CS-tNQ">
@@ -900,20 +905,8 @@
                     <view key="view" contentMode="scaleToFill" id="nuS-Vx-ZMW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sKc-30-Exm">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ehE-eD-xc6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ehE-eD-xc6" firstAttribute="trailing" secondItem="sKc-30-Exm" secondAttribute="trailing" id="Q4d-Ss-xVe"/>
-                            <constraint firstItem="ehE-eD-xc6" firstAttribute="bottom" secondItem="sKc-30-Exm" secondAttribute="bottom" id="laz-97-Ta6"/>
-                            <constraint firstItem="sKc-30-Exm" firstAttribute="top" secondItem="ehE-eD-xc6" secondAttribute="top" id="rlC-QO-QjI"/>
-                            <constraint firstItem="sKc-30-Exm" firstAttribute="leading" secondItem="ehE-eD-xc6" secondAttribute="leading" id="s95-Eu-KJu"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="yuS-6d-vaN"/>
                 </viewController>
@@ -1004,6 +997,9 @@
             <point key="canvasLocation" x="4054" y="1195"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="rze-8f-1xb"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="done" width="188" height="134"/>
