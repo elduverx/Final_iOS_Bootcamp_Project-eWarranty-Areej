@@ -11,6 +11,10 @@
 		004C52752778786100F1E14F /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C52742778786100F1E14F /* UIViewController+Ext.swift */; };
 		004C52772779A9CB00F1E14F /* OptionalDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C52762779A9CB00F1E14F /* OptionalDataViewController.swift */; };
 		004C527B277AEE3700F1E14F /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C527A277AEE3700F1E14F /* DetailTableViewCell.swift */; };
+		004C527D277DA13D00F1E14F /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C527C277DA13D00F1E14F /* HomeTableViewCell.swift */; };
+		004C527F277F12A600F1E14F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C527E277F12A600F1E14F /* SearchViewController.swift */; };
+		004C5281277F3F0800F1E14F /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C5280277F3F0800F1E14F /* OnboardingCollectionViewCell.swift */; };
+		004C5283277F42B100F1E14F /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C5282277F42B100F1E14F /* OnboardingSlide.swift */; };
 		005CA02E27665DF1005A0CB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA02D27665DF1005A0CB5 /* AppDelegate.swift */; };
 		005CA03027665DF1005A0CB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA02F27665DF1005A0CB5 /* SceneDelegate.swift */; };
 		005CA03227665DF1005A0CB5 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CA03127665DF1005A0CB5 /* AuthorizationViewController.swift */; };
@@ -36,6 +40,10 @@
 		004C52742778786100F1E14F /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		004C52762779A9CB00F1E14F /* OptionalDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalDataViewController.swift; sourceTree = "<group>"; };
 		004C527A277AEE3700F1E14F /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		004C527C277DA13D00F1E14F /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		004C527E277F12A600F1E14F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		004C5280277F3F0800F1E14F /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		004C5282277F42B100F1E14F /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		005CA02A27665DF1005A0CB5 /* WarrantyGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarrantyGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		005CA02D27665DF1005A0CB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		005CA02F27665DF1005A0CB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				004C527A277AEE3700F1E14F /* DetailTableViewCell.swift */,
+				004C527C277DA13D00F1E14F /* HomeTableViewCell.swift */,
+				004C5280277F3F0800F1E14F /* OnboardingCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -140,10 +150,11 @@
 				005CA05227676297005A0CB5 /* LoginViewController.swift */,
 				005CA0762768FDE0005A0CB5 /* HomeViewController.swift */,
 				005CA0982769E230005A0CB5 /* CategoryViewController.swift */,
+				004C52722771EFCF00F1E14F /* DetailViewController.swift */,
 				005CA0AF276CE802005A0CB5 /* AddViewController.swift */,
 				006CAD30276F6A51005A7DAC /* CameraViewController.swift */,
 				004C52762779A9CB00F1E14F /* OptionalDataViewController.swift */,
-				004C52722771EFCF00F1E14F /* DetailViewController.swift */,
+				004C527E277F12A600F1E14F /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,6 +182,7 @@
 			children = (
 				005CA09A276A1285005A0CB5 /* Category.swift */,
 				006CAD32276F6FE0005A7DAC /* Warranty.swift */,
+				004C5282277F42B100F1E14F /* OnboardingSlide.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,8 +331,12 @@
 				004C527B277AEE3700F1E14F /* DetailTableViewCell.swift in Sources */,
 				005CA03227665DF1005A0CB5 /* AuthorizationViewController.swift in Sources */,
 				004C52752778786100F1E14F /* UIViewController+Ext.swift in Sources */,
+				004C527F277F12A600F1E14F /* SearchViewController.swift in Sources */,
 				005CA04B276752B4005A0CB5 /* UIColor+Ext.swift in Sources */,
 				004C52772779A9CB00F1E14F /* OptionalDataViewController.swift in Sources */,
+				004C5283277F42B100F1E14F /* OnboardingSlide.swift in Sources */,
+				004C5281277F3F0800F1E14F /* OnboardingCollectionViewCell.swift in Sources */,
+				004C527D277DA13D00F1E14F /* HomeTableViewCell.swift in Sources */,
 				005CA0B0276CE802005A0CB5 /* AddViewController.swift in Sources */,
 				005CA02E27665DF1005A0CB5 /* AppDelegate.swift in Sources */,
 				006CAD31276F6A51005A7DAC /* CameraViewController.swift in Sources */,

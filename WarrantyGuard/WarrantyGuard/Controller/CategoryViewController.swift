@@ -11,7 +11,6 @@ class CategoryViewController : UIViewController , UITableViewDelegate ,UITableVi
   
   @IBOutlet weak var tableView: UITableView!
   
-//   var category: Category = Category()
   
   override func viewDidLoad() {
     super.viewDidLoad()

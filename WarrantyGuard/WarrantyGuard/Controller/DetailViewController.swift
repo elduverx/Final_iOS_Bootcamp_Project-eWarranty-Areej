@@ -17,6 +17,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     tableView.delegate = self
     tableView.dataSource = self
+    
   }
   
   
@@ -28,8 +29,10 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "detail", for: indexPath) as! DetailTableViewCell
+    
     let warrantyData = Warranty.allWarranty[indexPath.row]
-    cell.setUpCell(image: warrantyData.productImage!, name: warrantyData.productName)
+    
+    cell.setUpCell(image: warrantyData.productImage!, name: warrantyData.productName, expiryDate: warrantyData.expiryDate)
     
     return cell
     

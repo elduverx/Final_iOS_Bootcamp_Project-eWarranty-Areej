@@ -24,6 +24,7 @@ class SignUpViewController: UIViewController {
     super.viewDidLoad()
     Utilities.configureButtons(button: createAccountButton)
     errorLabel.alpha = 0
+    configureHideKeyboardWhenRootViewTapped()
     
   }
   

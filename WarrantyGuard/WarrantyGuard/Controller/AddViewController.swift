@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import UserNotifications
 
 class AddViewController: UIViewController {
   
@@ -21,8 +23,9 @@ class AddViewController: UIViewController {
   let pickerView = UIPickerView()
   let purchasDatePicker = UIDatePicker()
   let expiryDatePicker = UIDatePicker()
+  let notificationCenter = UNUserNotificationCenter.current()
   
-  
+  var warranty:Warranty?
   
   override func viewDidLoad() {
     
@@ -38,6 +41,75 @@ class AddViewController: UIViewController {
     pickerView.dataSource = self
     
     errorLabel.alpha = 0
+    
+    notificationCenter.requestAuthorization(options: [.alert, .sound]) { (permissionGranted, error) in
+      if (!permissionGranted){
+        print("Permission Denied")
+      }
+    }
+    
+  }
+  
+  
+  @IBAction func switchDidChanged(_ sender: UISwitch) {
+    
+    if sender.isOn {
+      
+      notificationCenter.getNotificationSettings { (settings) in
+        
+        DispatchQueue.main.async {
+          if (settings.authorizationStatus == .authorized)
+          {
+            let content = UNMutableNotificationContent()
+            content.title = "The warranty about to expire"
+            content.body = "Your warranty will expire in a week"
+            
+            let weekBefore = Calendar.current.date(byAdding: .day, value: -7 , to: self.expiryDatePicker.date)
+            
+            let reminderDate = Calendar.current.dateComponents([.year, .month, .day], from: weekBefore ?? Date())
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: reminderDate, repeats: false)
+            
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            
+            self.notificationCenter.add(request) { error in
+              if error != nil {
+                
+                print("Error" + error.debugDescription)
+                return
+                
+              }
+            }
+            let ac = UIAlertController(title: "Notification Scheduled", message: "You will receive a notification one week before the warranty expiry date" , preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in}))
+            self.present(ac, animated: true)
+          }
+          else {
+            
+            let ac = UIAlertController(title: "Enable Notifications", message: "To use this feature you must enable notifications in settings" , preferredStyle: .alert)
+            
+            let gotToSettings = UIAlertAction(title: "settings", style: .default){ _ in
+              guard let settingsURL = URL(string: UIApplication.openSettingsURLString)
+              else
+              {
+                return
+              }
+              
+              if (UIApplication.shared.canOpenURL(settingsURL)){
+                UIApplication.shared.open(settingsURL) {(_) in }
+              }
+            }
+            
+            ac.addAction(gotToSettings)
+            ac.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { _ in}))
+            self.present(ac, animated: true)
+            
+          }
+        }
+        
+      }
+      
+    }
     
   }
   
@@ -129,9 +201,9 @@ class AddViewController: UIViewController {
     }
     return nil
   }
+
   
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  @IBAction func continueButtonPressed(_ sender: Any) {
     
     let error = validateFields()
     
@@ -140,34 +212,34 @@ class AddViewController: UIViewController {
       // There's something wrong with the fields, show error message
       showError(error!)
       
-    }
-    else {
+    } else {
       
-      if segue.identifier == "Continue" {
+      let db = Firestore.firestore()
+      var ref: DocumentReference? = nil
+      
+      let productName = productNameTextField.text
+      let purchasDate = purchaseDateTextField.text
+      let expiryDate = expiryDateTextField.text
+      let category = categoryTextField.text
+      
+      ref = db.collection("warrantys").addDocument(data: ["productName":productName, "lastname":purchasDate, "expiryDate": expiryDate, "category": category ]) { (error) in
         
-        let destinationVC = segue.destination as! CameraViewController
-        
-        let productName = productNameTextField.text
-        let purchaseDate = purchaseDateTextField.text
-        let expiryDate = expiryDateTextField.text
-        let category = categoryTextField.text
-        
-        destinationVC.productName = productName ?? ""
-        destinationVC.purchaseDate = purchaseDate ?? ""
-        destinationVC.expiryDate = expiryDate ?? ""
-        destinationVC.category = category ?? ""
-        
-        
+        if error != nil {
+          // Show error message
+          self.showError("Error saving user data")
+        }
+        else {
+          print("document added")
+        }
       }
       
+      performSegue(withIdentifier: "Continue", sender: nil)
+      
     }
+    
   }
   
-  
-//  func getTheDaysLeft() -> String {
-//    let diffInDays = Calendar.current.dateComponents([.day], from: purchasDatePicker, to: expiryDatePicker).day
-//  }
-  
+
 }
 
 

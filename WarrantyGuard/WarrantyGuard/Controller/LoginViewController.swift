@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
     super.viewDidLoad()
     errorLabel.alpha = 0
     Utilities.configureButtons(button: loginButton)
+    configureHideKeyboardWhenRootViewTapped()
     
   }
   

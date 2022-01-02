@@ -6,17 +6,11 @@
 //
 
 import UIKit
+import Firebase
 
 class OptionalDataViewController : UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
   
-  var productName = ""
-  var purchaseDate = ""
-  var expiryDate = ""
-  var category = ""
-  var theWarrantyImage:UIImage?
-  var theProductImage:UIImage?
-  var notes = ""
-  
+  var warranty:Warranty?
   
   @IBOutlet weak var productImageView: UIImageView!
   @IBOutlet weak var notesTextField: UITextField!
@@ -28,9 +22,6 @@ class OptionalDataViewController : UIViewController, UIImagePickerControllerDele
     super.viewDidLoad()
     Utilities.configureButtons(button: nextButton)
     configureHideKeyboardWhenRootViewTapped()
-    
-    
-    
     
   }
   
@@ -47,15 +38,24 @@ class OptionalDataViewController : UIViewController, UIImagePickerControllerDele
   
   @IBAction func nextButtonPressed(_ sender: UIButton) {
     
-    notes = notesTextField.text ?? ""
-    theProductImage = productImageView.image
+    let db = Firestore.firestore()
+    var ref: DocumentReference? = nil
+    
+    let productImage = productImageView.image
+    let notes = notesTextField.text
+     
+    ref = db.collection("warrantys").addDocument(data: ["productImage":productImage, "notes": notes]) { (error) in
+      
+      if error != nil {
+        // Show error message
+        print("Error saving user data")
+      }
+      else {
+        print("document added")
+      }
+    }
     
     
-    let data = Warranty(productName: productName, purchasDate: purchaseDate, expiryDate: expiryDate, category: category, warrantyImage: theWarrantyImage!, productImage: theProductImage, notes: notes)
-    
-    Warranty.allWarranty.append(data)
-    
-    print("\(data)")
     
   }
   
