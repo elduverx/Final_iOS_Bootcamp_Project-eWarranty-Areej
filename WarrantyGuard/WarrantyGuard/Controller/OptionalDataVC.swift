@@ -8,12 +8,12 @@
 import UIKit
 import Firebase
 
-class OptionalDataViewController : UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class OptionalDataVC : UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
   
   var warranty:Warranty?
   
   @IBOutlet weak var productImageView: UIImageView!
-  @IBOutlet weak var notesTextField: UITextField!
+  @IBOutlet weak var notesTextView: UITextView!
   @IBOutlet weak var nextButton: UIButton!
   
   
@@ -38,24 +38,22 @@ class OptionalDataViewController : UIViewController, UIImagePickerControllerDele
   
   @IBAction func nextButtonPressed(_ sender: UIButton) {
     
-    let db = Firestore.firestore()
-    var ref: DocumentReference? = nil
-    
-    let productImage = productImageView.image
-    let notes = notesTextField.text
-     
-    ref = db.collection("warrantys").addDocument(data: ["productImage":productImage, "notes": notes]) { (error) in
-      
-      if error != nil {
-        // Show error message
-        print("Error saving user data")
-      }
-      else {
-        print("document added")
-      }
-    }
-    
-    
+//    let db = Firestore.firestore()
+//    var ref: DocumentReference? = nil
+//
+//    let productImage = productImageView.image
+//    let notes = notesTextView.text
+//
+//    ref = db.collection("warrantys").addDocument(data: ["productImage":productImage, "notes": notes]) { (error) in
+//
+//      if error != nil {
+//        // Show error message
+//        print("Error saving user data")
+//      }
+//      else {
+//        print("document added")
+//      }
+//    }
     
   }
   

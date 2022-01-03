@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthorizationViewController: UIViewController {
+class AuthorizationVC: UIViewController {
   
   @IBOutlet weak var signUpButton: UIButton!
   @IBOutlet weak var logInButton: UIButton!
@@ -37,7 +37,7 @@ class AuthorizationViewController: UIViewController {
 }
 
 
-extension AuthorizationViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension AuthorizationVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

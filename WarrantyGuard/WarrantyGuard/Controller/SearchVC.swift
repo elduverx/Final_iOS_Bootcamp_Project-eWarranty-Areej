@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController , UISearchBarDelegate {
+class SearchVC: UIViewController , UISearchBarDelegate {
 
   var warranty:Warranty?
   
@@ -24,9 +24,7 @@ class SearchViewController: UIViewController , UISearchBarDelegate {
 
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     
-    if searchText == warranty?.productName {
-      
-    }
+    
     
   }
 

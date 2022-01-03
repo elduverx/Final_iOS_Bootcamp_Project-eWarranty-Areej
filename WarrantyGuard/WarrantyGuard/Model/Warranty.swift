@@ -11,12 +11,12 @@ struct Warranty {
   
   static var allWarranty = [Warranty]()
   
-  var productName:String
-  var purchasDate: String
-  var expiryDate: String
-  var category:String
-  var warrantyImage: UIImage
-  var productImage: UIImage?
+  var productName:String?
+  var purchasDate: String?
+  var expiryDate: String?
+  var category:String?
+  var warrantyImage: String?
+  var productImage: String?
   var notes: String?
   
 }

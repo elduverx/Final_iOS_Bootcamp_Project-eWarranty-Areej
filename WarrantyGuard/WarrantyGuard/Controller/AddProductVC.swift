@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import UserNotifications
 
-class AddViewController: UIViewController {
+class AddProductVC: UIViewController {
   
   @IBOutlet weak var productNameTextField: UITextField!
   @IBOutlet weak var purchaseDateTextField: UITextField!
@@ -222,7 +222,7 @@ class AddViewController: UIViewController {
       let expiryDate = expiryDateTextField.text
       let category = categoryTextField.text
       
-      ref = db.collection("warrantys").addDocument(data: ["productName":productName, "lastname":purchasDate, "expiryDate": expiryDate, "category": category ]) { (error) in
+      ref = db.collection("warrantys").addDocument(data: ["productName":productName, "purchasDate":purchasDate, "expiryDate": expiryDate, "category": category ]) { (error) in
         
         if error != nil {
           // Show error message
@@ -243,7 +243,7 @@ class AddViewController: UIViewController {
 }
 
 
-extension AddViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension AddProductVC: UIPickerViewDelegate, UIPickerViewDataSource {
   
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1

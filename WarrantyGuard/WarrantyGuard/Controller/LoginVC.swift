@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginVC: UIViewController {
   
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
     configureHideKeyboardWhenRootViewTapped()
     
   }
+  
   
   @IBAction func loginTapped(_ sender: UIButton) {
     // TODO: Validate Text Fields

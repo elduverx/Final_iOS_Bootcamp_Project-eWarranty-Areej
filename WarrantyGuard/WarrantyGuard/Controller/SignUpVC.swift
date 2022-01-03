@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class SignUpViewController: UIViewController {
+class SignUpVC: UIViewController {
   
   @IBOutlet weak var firstNameTextField: UITextField!
   @IBOutlet weak var lastNameTextField: UITextField!
@@ -19,43 +19,13 @@ class SignUpViewController: UIViewController {
   @IBOutlet weak var errorLabel: UILabel!
   
   
-  override func viewDidLoad() {
+  override func viewDidLoad(){
     
     super.viewDidLoad()
     Utilities.configureButtons(button: createAccountButton)
     errorLabel.alpha = 0
     configureHideKeyboardWhenRootViewTapped()
     
-  }
-  
-  
-  // Check the fields and validate that the data is correct. If everything is correct, this method returns nil. Otherwise, it returns the error message
-  func validateFields()-> String? {
-    
-    // Check that all fields are filled in
-    if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-      
-      return "Please fill in all fields"
-      
-    }
-    
-    // Check if the password is secure
-    let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-    
-    if isPasswordValid(cleanedPassword) == false {
-      return "Please make sure your password is at least 8 characters, contains a special character and number "
-    }
-    return nil
-  }
-  
-  
-  func isPasswordValid(_ password : String) -> Bool {
-    let passwordTest = NSPredicate(format: "SELF MATCHES %@",
-                                   "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*()\\-_=+{}|?>.<,:;~`’]{8,}$" )
-    return passwordTest.evaluate(with: password)
   }
   
   
@@ -116,13 +86,43 @@ class SignUpViewController: UIViewController {
   }
   
   
-  func transitionToMain() {
+  func transitionToMain(){
     
     let mainViewController = storyboard?.instantiateViewController(identifier:"Main")
     
     view.window?.rootViewController = mainViewController
     view.window?.makeKeyAndVisible()
     
+  }
+  
+  
+  // Check the fields and validate that the data is correct. If everything is correct, this method returns nil. Otherwise, it returns the error message
+  func validateFields()-> String? {
+    
+    // Check that all fields are filled in
+    if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+      
+      return "Please fill in all fields"
+      
+    }
+    
+    // Check if the password is secure
+    let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+    
+    if isPasswordValid(cleanedPassword) == false {
+      return "Please make sure your password is at least 8 characters, contains a special character and number "
+    }
+    return nil
+  }
+  
+  
+  func isPasswordValid(_ password : String) -> Bool {
+    let passwordTest = NSPredicate(format: "SELF MATCHES %@",
+                                   "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*()\\-_=+{}|?>.<,:;~`’]{8,}$" )
+    return passwordTest.evaluate(with: password)
   }
   
 }

@@ -7,16 +7,18 @@
 
 import UIKit
 
-class CategoryViewController : UIViewController , UITableViewDelegate ,UITableViewDataSource{
+class CategoryVC : UIViewController , UITableViewDelegate ,UITableViewDataSource{
   
   @IBOutlet weak var tableView: UITableView!
   
   
   override func viewDidLoad() {
+    
     super.viewDidLoad()
     
     tableView.delegate = self
     tableView.dataSource = self
+    
   }
   
   

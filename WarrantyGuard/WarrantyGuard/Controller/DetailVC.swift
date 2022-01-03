@@ -7,12 +7,13 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
   @IBOutlet weak var tableView: UITableView!
   
   
   override func viewDidLoad() {
+    
     super.viewDidLoad()
     
     tableView.delegate = self
@@ -32,7 +33,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     let warrantyData = Warranty.allWarranty[indexPath.row]
     
-    cell.setUpCell(image: warrantyData.productImage!, name: warrantyData.productName, expiryDate: warrantyData.expiryDate)
+//    cell.setUpCell(image: warrantyData.productImage, name: warrantyData.productName ?? "", expiryDate: warrantyData.expiryDate ?? "")
     
     return cell
     

@@ -11,7 +11,7 @@ import FirebaseStorage
 import Photos
 
 
-class CameraViewController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CameraVC : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
   var warranty:Warranty?
   
