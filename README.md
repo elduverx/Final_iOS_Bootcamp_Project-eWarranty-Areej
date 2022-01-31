@@ -21,3 +21,8 @@ Everyone who has a warranty
    - The user can find a warranty by using a search bar.
    - The user will get a notification when a warranty is about to expire.
    - Support dark/light modes.
+   
+   
+   ## Screenshots
+   - User will be asked for authorization when they enter the app.
+   <img src="https://user-images.githubusercontent.com/90204829/151798842-e990fbea-146c-4cc9-b972-490b21f05935.png"  width="170" height=“350”> <img src="https://user-images.githubusercontent.com/90204829/151798842-e990fbea-146c-4cc9-b972-490b21f05935.png"  width="170" height=“350”> <img src="https://user-images.githubusercontent.com/90204829/151799137-c22f6342-6e20-4bd4-89ce-85c420d4fd59.png"  width="170" height=“350”>
