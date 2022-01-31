@@ -32,3 +32,17 @@ Everyone who has a warranty
   - The user can add items by name, purchase date, expiry date and optional informations like item photo and notes if any.
   
   <img src="https://user-images.githubusercontent.com/90204829/151803518-5e2958bd-dd5f-43ea-8448-96f5cd34dc60.png"  width="170" height=“350”> <img src="https://user-images.githubusercontent.com/90204829/151803614-9838bb65-ac15-4749-86ec-0d6ee89c42ae.png"  width="170" height=“350”> <img src="https://user-images.githubusercontent.com/90204829/151803736-c44740a4-2f55-4670-abb4-0f47c37c4efc.png"  width="170" height=“350”>
+  
+  
+  - All warranties are organized into categories such as electronics, phones, and jewelry.
+
+https://user-images.githubusercontent.com/90204829/151837166-677c3a42-ed73-4c4d-9e8e-1f0b7c4eb791.mp4
+
+
+  - The user can find a warranty by using a search bar.
+
+https://user-images.githubusercontent.com/90204829/151837449-834694c1-4f6f-4099-83ed-098663f85ee7.mp4
+
+
+  
+  
