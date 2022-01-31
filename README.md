@@ -44,5 +44,11 @@ https://user-images.githubusercontent.com/90204829/151837166-677c3a42-ed73-4c4d-
 https://user-images.githubusercontent.com/90204829/151837449-834694c1-4f6f-4099-83ed-098663f85ee7.mp4
 
 
+  - Support dark/light modes.
+<img src="https://user-images.githubusercontent.com/90204829/151838297-13614e14-fa46-4851-9146-ffb9605e4638.png"  width="170" height=“350”>
+
+
+
+
   
   
