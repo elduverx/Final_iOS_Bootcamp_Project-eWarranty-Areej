@@ -31,4 +31,4 @@ Everyone who has a warranty
    
   - The user can add items by name, purchase date, expiry date and optional informations like item photo and notes if any.
   
-  <img src="https://user-images.githubusercontent.com/90204829/151803518-5e2958bd-dd5f-43ea-8448-96f5cd34dc60.png”> <img src="https://user-images.githubusercontent.com/90204829/151803614-9838bb65-ac15-4749-86ec-0d6ee89c42ae.png"  width="170" height=“350”> <img src="https://user-images.githubusercontent.com/90204829/151803736-c44740a4-2f55-4670-abb4-0f47c37c4efc.png"  width="170" height=“350”>
+  <img src="https://user-images.githubusercontent.com/90204829/151803518-5e2958bd-dd5f-43ea-8448-96f5cd34dc60.png"  width="170" height=“350”> <img src="https://user-images.githubusercontent.com/90204829/151803614-9838bb65-ac15-4749-86ec-0d6ee89c42ae.png"  width="170" height=“350”> <img src="https://user-images.githubusercontent.com/90204829/151803736-c44740a4-2f55-4670-abb4-0f47c37c4efc.png"  width="170" height=“350”>
